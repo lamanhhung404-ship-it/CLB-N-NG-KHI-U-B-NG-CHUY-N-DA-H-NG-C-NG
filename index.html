@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thầy Hùng - Đào tạo Bóng Chuyền Da</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero">
+        <img src="images/avatar.jpg.jpg" alt="Ảnh đại diện Thầy Hùng">
+        <h1>Thầy Hùng</h1>
+        <p>Huấn Luyện Viên Thể Thao • Quản lý CLB NĂNG KHIẾU BÓNG CHUYỀN DA HÙNG CƯỜNG</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Chương Trình Đào Tạo & Huấn Luyện</h2>
+        <ul>
+            <li><strong>Lớp cơ bản:</strong> Đào tạo kỹ thuật đệm bóng, chuyền hai, phát bóng và di chuyển nền tảng cho người mới bắt đầu.</li>
+            <li><strong>Lớp nâng cao:</strong> Rèn luyện kỹ năng đập bóng tấn công, bám chắn trên lưới và tư duy chiến thuật trong thi đấu.</li>
+            <li><strong>Huấn luyện thể lực:</strong> Áp dụng các bài tập chuyên biệt giúp tăng cường sức bật, sự dẻo dai và sức bền trên sân.</li>
+            <li><strong>Môi trường cọ xát:</strong> Tổ chức thi đấu nội bộ và đại diện CLB tham gia các giải đấu phong trào tại địa phương.</li>
+        </ul>
+    </div>
+
+    <div class="gallery-section">
+        <h2>Hình Ảnh Hoạt Động</h2>
+        <div class="gallery-grid">
+            <img src="images/gallery1.jpg.jpg" alt="Học viên tập luyện">
+            <img src="images/gallery2.jpg.jpg" alt="Kỹ thuật đập bóng">
+            <img src="images/gallery3.jpg.jpg" alt="Thi đấu giao hữu">
+            <img src="images/gallery4.jpg.jpg" alt="Huấn luyện thể lực">
+            <img src="images/gallery5.jpg.jpg" alt="Đội hình thi đấu">
+            <img src="images/gallery6.jpg.jpg" alt="Tập thể câu lạc bộ">
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>Khoảnh Khắc Sân Tập</h2>
+        <div class="video-grid">
+            <video src="videos/video1.mp4.mp4" controls muted preload="metadata"></video>
+            <video src="videos/video2.mp4.mp4" controls muted preload="metadata"></video>
+            <video src="videos/video3.mp4.mp4" controls muted preload="metadata"></video>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>Tham Gia Câu Lạc Bộ Ngay</h2>
+        <p>Hãy liên hệ với tôi để đăng ký học và trở thành thành viên của CLB NĂNG KHIẾU BÓNG CHUYỀN DA HÙNG CƯỜNG!</p>
+        <div class="button-group">
+            <a href="https://zalo.me/0388667404" target="_blank" class="btn btn-zalo">Đăng Ký Qua Zalo</a>
+            <a href="https://web.facebook.com/share/1B6BP3UPHC/?mibextid=wwXIfr&_rdc=1&_rdr" target="_blank" class="btn btn-facebook">Nhắn Tin Facebook</a>
+        </div>
+    </div>
+<script>
+        // Tự động tìm các khung nội dung trên web
+        const sections = document.querySelectorAll('.content-section, .gallery-section, .video-section, .contact-section');
+        
+        // Cài đặt bộ theo dõi: khi người dùng cuộn chuột đến đâu thì mới hiện ra đến đó
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-on-scroll');
+                }
+            });
+        }, { threshold: 0.15 }); // Hiện ra khi cuộn qua 15% khung
+
+        // Áp dụng trạng thái tàng hình ban đầu cho các khung
+        sections.forEach(section => {
+            section.classList.add('hidden-on-scroll');
+            observer.observe(section);
+        });
+    </script>
+    <a href="https://zalo.me/0388667404" target="_blank" class="floating-zalo-btn">
+        💬 Chat Zalo
+    </a>
+    <a href="tel:0388667404" class="floating-call-btn">
+        📞 Gọi Ngay
+    </a>
+</body>
+</html>

@@ -1,0 +1,315 @@
+/* Reset định dạng cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Định dạng phần Hero (đầu trang) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff7b00; /* Đổi viền sang màu cam bóng chuyền */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+    color: #0056b3;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Định dạng phần Nội dung và Liên hệ */
+.content-section, .contact-section {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.content-section {
+    margin-top: -30px; /* Đẩy khung nội dung lùi lên tạo điểm nhấn */
+    position: relative;
+    z-index: 10;
+}
+
+.content-section h2, .contact-section h2 {
+    color: #ff7b00; /* Màu cam thể thao */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.content-section ul {
+    list-style-type: none;
+}
+
+.content-section ul li {
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.content-section ul li::before {
+    content: "🏐"; /* Biểu tượng quả bóng chuyền */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Định dạng nhóm nút bấm Liên hệ */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-zalo {
+    background-color: #0068ff;
+}
+
+.btn-facebook {
+    background-color: #1877f2;
+}
+/* Định dạng phần Thư viện Hình ảnh */
+.gallery-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.gallery-section h2 {
+    color: #ff7b00; /* Màu cam thể thao */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Lưới 3 cột chuẩn xác */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Chia đúng 3 cột bằng nhau */
+    gap: 15px; /* Khoảng cách giữa các ảnh */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px; /* Ép chiều cao bằng nhau để lưới vuông vức */
+    object-fit: cover; /* Giữ ảnh không bị méo khi ép kích thước */
+    border-radius: 8px; /* Bo góc nhẹ cho từng ảnh */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thời gian chuyển động */
+    cursor: pointer;
+}
+
+/* Hiệu ứng nổi bật: Phóng to nhẹ khi di chuột vào */
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Phóng to lên 5% */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+/* Định dạng phần Video Nổi Bật */
+.video-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.video-section h2 {
+    color: #ff7b00; /* Màu cam thể thao */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Lưới chia 3 cột cho video */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.video-grid video {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000; /* Hiển thị nền đen trước khi video load xong */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Hiệu ứng chuyển động trượt lên mượt mà */
+.hidden-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Kéo nội dung tụt xuống 50px */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Thời gian chuyển động là 0.8 giây */
+}
+
+.show-on-scroll {
+    opacity: 1;
+    transform: translateY(0); /* Trả nội dung về vị trí ban đầu */
+}
+/* Định dạng Nút Gọi Điện Bám Dính */
+.floating-call-btn {
+    position: fixed; /* Lệnh này giúp nút luôn bám dính ở một vị trí */
+    bottom: 30px; /* Cách đáy màn hình 30px */
+    right: 30px; /* Cách lề phải màn hình 30px */
+    background-color: #ff0000; /* Màu đỏ nổi bật */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px; /* Bo tròn nút */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+    z-index: 1000; /* Lệnh này đảm bảo nút luôn nổi lên trên cùng, không bị các ảnh khác đè lên */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+    animation: pulse-red 1.5s infinite; /* Kích hoạt hiệu ứng nhấp nháy liên tục */
+}
+
+/* Khi khách di chuột vào nút sẽ tự động to lên một chút */
+.floating-call-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Tạo phép thuật nhấp nháy (tỏa sáng) cho nút */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+/* =======================================================
+   TỐI ƯU GIAO DIỆN CHO MÀN HÌNH ĐIỆN THOẠI (RESPONSIVE)
+======================================================= */
+@media screen and (max-width: 768px) {
+    /* Thu nhỏ chữ và ảnh đại diện ở phần đầu trang một chút */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Quan trọng: Biến lưới 3 cột của Ảnh và Video thành 1 cột dọc */
+    .gallery-grid, .video-grid {
+        grid-template-columns: 1fr; /* 1fr nghĩa là 1 cột chiếm toàn bộ chiều rộng */
+        gap: 20px;
+    }
+
+    /* Video trên điện thoại cần cao hơn một chút để dễ xem */
+    .video-grid video {
+        height: 220px; 
+        object-fit: cover;
+    }
+
+    /* Các nút đăng ký (Zalo, Facebook) tự động xếp chồng lên nhau cho dễ bấm */
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%; /* Kéo giãn nút bấm bằng chiều ngang màn hình */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+/* Định dạng Nút Chat Zalo Bám Dính */
+.floating-zalo-btn {
+    position: fixed;
+    bottom: 100px; /* Đẩy nút này lên cao hơn nút Gọi Điện đang ở mốc 30px */
+    right: 30px;
+    background-color: #0068ff; /* Màu xanh Zalo chuẩn */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 104, 255, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+    animation: pulse-blue 1.5s infinite; /* Kích hoạt hiệu ứng nhấp nháy màu xanh */
+}
+
+/* Nảy lên nhẹ khi di chuột vào */
+.floating-zalo-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Hiệu ứng tỏa sáng màu xanh cho nút Zalo */
+@keyframes pulse-blue {
+    0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 104, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); }
+}
